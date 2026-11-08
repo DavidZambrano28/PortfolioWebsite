@@ -20,7 +20,7 @@
 
 <header class="site-nav">
   <div class="container">
-    <a href="index.html" class="brand"><span class="brand-dot"></span>David Zambrano</a>
+    <a href="about.html" class="brand"><span class="brand-dot"></span>David Zambrano</a>
     <nav class="nav-links" id="nav-links">
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
@@ -48,6 +48,44 @@
     <div class="container">
       <div class="blog-list">
 
+        <details class="blog-post reveal">
+          <summary>
+            <div class="blog-post-head">
+              <h3>PCBA Struggles</h3>
+              <span class="blog-post-date">November 1, 2026</span>
+              <p class="blog-post-excerpt">Trouble in Paradise</p>
+            </div>
+            <span class="blog-post-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </summary>
+          <div class="blog-post-body">
+            <div class="media-slot">
+              <img src="Images/BlogPhotos/PCBA.jpeg" alt="[Describe the photo]" loading="lazy"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="media-fallback">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Add photo</span>
+              </div>
+            </div>
+            <p style="padding: 15px 0;">
+              The past month has been busy, so PCBA and testing has been sparse. The first board that was built had some shorts (which were discovered AFTER we plugged it in), and *maybe* had 
+              the crystal backwards, which resulted in the RP2040 being recognized by windows, but with an error that read something along the lines of "I see it but it is malfunctioning".
+              The second board we built was better but has the USB-C shorting as well, so we had to rip it off, pending replacement. </p>
+            <p>
+              The board was designed with the expectation of using 
+              JLCPCB's assembly service, so the fine pitch components and small package sizes (many 0402 components) was never a consideration. The decision to do it by hand was motivated
+              by the extreme cost of not only the PCBA itself but also the high tariffs. Regardless of how frustrating the process is however, I learned a lot about PCBA, and am very confident on building
+              a PCB and performing repairs where needed. For the next batch of boards (which comes with several key redesigns as mentioned in the last post), however, we will prioritize assembly service to 
+              get this project steaming ahead. 
+            </p>
+            <div class="blog-post-tags">
+              <span class="tag">Warthog</span>
+              <span class="tag">PCB Assembly</span>
+            </div>
+          </div>
+        </details>
+
        <details class="blog-post reveal">
           <summary>
             <div class="blog-post-head">
@@ -72,7 +110,10 @@
               As part of the Phot1x UBCx course, I have installed the SiEPIC PDK into KLayout. Man. For the past 2 tapeouts, I did everything in KLayout mostly manually when it comes to 
               alignment and such. I would export the GDSII files from Tidy3D, then import them to the layout. Since we have fabricated with Applied Nanotools, I have been using their PDK 
               specifically for their grating coupler so we could get some experimental data. This SiEPIC PDK however takes it to another level. So many custom scripts for pin snapping, 
-              waveguide to path, many PCells, a one-button layout verification tool, the list goes on. Now, this is perfect within the confines of the course as you are expected to use their components to make some 
+              waveguide to path, many PCells, a one-button layout verification tool, the list goes on. 
+            </p>
+            <p>
+              Now, this is perfect within the confines of the course as you are expected to use their components to make some 
               Mach-Zehnder Interferometers (MZIs). It gets dicey when you try to import custom geometry not defined in the CML, as you need to get around the verification step through adding a 
               DevRec box and making a cell out of your geometry. Trying to put in a custom ring close to a path defined waveguide results in an overlap error (the DevRec boxes overlapping),
               which as far as I tried, for many hours, can't be cicrumvented. So, unless my coupling gap was about 400nm, then I couldn't have my custom geometry measured. I realized, then,
