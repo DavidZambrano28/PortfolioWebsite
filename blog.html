@@ -48,6 +48,44 @@
     <div class="container">
       <div class="blog-list">
 
+        <!-- After this line, sonion-->
+
+         <details class="blog-post reveal">
+          <summary>
+            <div class="blog-post-head">
+              <h3>Making Progress</h3>
+              <span class="blog-post-date">November 8, 2026</span>
+              <p class="blog-post-excerpt">Let there be light!</p>
+            </div>
+            <span class="blog-post-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </summary>
+          <div class="blog-post-body">
+            <div class="media-slot">
+              <img src="Images/BlogPhotos/WorkingPCB.jpeg" alt="[Describe the photo]" loading="lazy"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="media-fallback">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Add photo</span>
+              </div>
+            </div>
+            <p style="padding: 15px 0;">
+              After replacing the USB-C as mentioned in the previous post, we finally got a (semi) working PCB. Specifically, windows was able to recognize it as a mass storage device,
+              and get a LED program functioning! This validates that our schematic as it pertains to the RP2040 is functioning properly. Now, we will map out the pin assignments from
+              our Raspberry Pi Pico code to this custom board and test the I2C functionality with the OLED screen.
+            </p>
+            <p>
+              We will also do some testing with the buck converter circuit, I am expecting good results and perhaps a fully working board. But, you never know, and often
+              these things take... time. Hofstadter's Law or something.
+            </p>
+            <div class="blog-post-tags">
+              <span class="tag">Warthog</span>
+              <span class="tag">PCB Assembly</span>
+            </div>
+          </div>
+        </details>
+
         <details class="blog-post reveal">
           <summary>
             <div class="blog-post-head">
