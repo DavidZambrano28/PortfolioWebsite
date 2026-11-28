@@ -1,0 +1,9 @@
+{"level":"INFO","time":1795668486566,"source":"extension","module":"Analytics","msg":"Usage telemetry disabled; PostHog analytics disabled"}
+{"level":"INFO","time":1795668486779,"source":"extension","module":"Analytics","msg":"Usage telemetry disabled; PostHog analytics disabled"}
+{"level":"INFO","time":1795673741181,"source":"extension","module":"RustRpc","code":1073807364,"signal":null,"msg":"child exited"}
+{"level":"ERROR","time":1795673741183,"source":"extension","module":"RustRpc","pid":40800,"code":1073807364,"signal":null,"error":null,"reason":"Server process exited (code 1073807364, signal none)","msg":"gfp serve exited unexpectedly"}
+{"level":"WARN","time":1795673741184,"source":"extension","module":"RustRpc","reason":"Server process exited (code 1073807364, signal none)","msg":"GF+ server exited unexpectedly; restarting once"}
+{"level":"INFO","time":1795673741815,"source":"extension","module":"RustRpc","code":3221225794,"signal":null,"msg":"child exited"}
+{"level":"ERROR","time":1795673741816,"source":"extension","module":"RustRpc","pid":30864,"code":3221225794,"signal":null,"error":null,"reason":"Server process exited (code 3221225794, signal none)","msg":"gfp serve closed before becoming ready"}
+{"level":"ERROR","time":1795673741816,"source":"extension","module":"RustRpc","reason":"Error: Server process exited","msg":"GF+ server recovery stopped"}
+{"level":"ERROR","time":1795673746469,"source":"extension","module":"RustRpc","message":"Canceled: Canceled","msg":"failed to show server lifecycle notification"}
